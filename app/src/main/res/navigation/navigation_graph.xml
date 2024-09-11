@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainPage">
+
+    <fragment
+        android:id="@+id/userLogin"
+        android:name="com.nurullahsevinckan.artlib.view.UserLogin"
+        android:label="fragment_user_login"
+        tools:layout="@layout/fragment_user_login" >
+        <action
+            android:id="@+id/action_userLogin_to_newUser"
+            app:destination="@id/newUser" />
+        <action
+            android:id="@+id/action_userLogin_to_mainPage"
+            app:destination="@id/mainPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/newUser"
+        android:name="com.nurullahsevinckan.artlib.view.NewUser"
+        android:label="fragment_new_user"
+        tools:layout="@layout/fragment_new_user" >
+        <action
+            android:id="@+id/action_newUser_to_userLogin"
+            app:destination="@id/userLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/addArt"
+        android:name="com.nurullahsevinckan.artlib.view.AddArt"
+        android:label="fragment_add_art"
+        tools:layout="@layout/fragment_add_art" >
+        <action
+            android:id="@+id/action_addArt_to_mainPage"
+            app:destination="@id/mainPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/artDetail"
+        android:name="com.nurullahsevinckan.artlib.view.ArtDetail"
+        android:label="fragment_art_detail"
+        tools:layout="@layout/fragment_art_detail" />
+    <fragment
+        android:id="@+id/mainPage"
+        android:name="com.nurullahsevinckan.artlib.view.MainPage"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/action_mainPage_to_addArt"
+            app:destination="@id/addArt" />
+        <action
+            android:id="@+id/action_mainPage_to_artDetail"
+            app:destination="@id/artDetail" />
+        <action
+            android:id="@+id/action_mainPage_to_userLogin"
+            app:destination="@id/userLogin" />
+    </fragment>
+</navigation>
