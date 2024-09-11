@@ -1,9 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    tools:context=".view.UserLogin"
+    >
 
-    tools:context=".view.UserLogin"/>
+    <EditText
+        android:id="@+id/passwordText"
+        android:layout_width="282dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mailText" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="239dp"
+        android:layout_height="226dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/enter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/userlo" />
+
+    <EditText
+        android:id="@+id/mailText"
+        android:layout_width="285dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="Mail@example.com"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/signinButton"
+        android:layout_width="127dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="28dp"
+        android:onClick="signingButtonClick"
+        android:text="Sign In"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/passwordText"
+        app:layout_constraintTop_toBottomOf="@+id/passwordText" />
+
+    <TextView
+        android:id="@+id/createAccountButton"
+        android:layout_width="124dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="28dp"
+        android:onClick="createAccountClick"
+        android:text="Create Account"
+        android:textColor="#161313"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/signinButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/signinButton"
+        app:layout_constraintTop_toBottomOf="@+id/signinButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
