@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "19219335161",
+    "project_id": "artlib-1b1e3",
+    "storage_bucket": "artlib-1b1e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:19219335161:android:cbb843c7443b90263cdf28",
+        "android_client_info": {
+          "package_name": "com.nurullahsevinckan.artlib"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2RbhmHa3wasQSFWEtkfAgY6rSeLbhTbc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
