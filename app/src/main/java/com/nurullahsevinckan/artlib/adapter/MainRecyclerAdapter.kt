@@ -2,9 +2,11 @@ package com.nurullahsevinckan.artlib.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.nurullahsevinckan.artlib.databinding.ArtRowBinding
 import com.nurullahsevinckan.artlib.model.Arts
+import com.nurullahsevinckan.artlib.view.MainPageDirections
 import com.squareup.picasso.Picasso
 
 class MainRecyclerAdapter(val artList : List<Arts>) : RecyclerView.Adapter<PostHolder>() {
@@ -25,6 +27,11 @@ class MainRecyclerAdapter(val artList : List<Arts>) : RecyclerView.Adapter<PostH
         holder.binding.recyclerContentText.text = artDescription
         holder.binding.recyclerEmailText.text = artList.get(position).userMail
         Picasso.get().load(artList.get(position).url).into(holder.binding.recyclerImage)
+
+        holder.binding.itemContent.setOnClickListener {
+            val action = MainPageDirections.actionMainPageToArtDetail(artList.get(position).url,artDescription)
+            Navigation.findNavController(holder.itemView).navigate(action)
+        }
     }
 
 

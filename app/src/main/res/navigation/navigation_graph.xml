@@ -39,7 +39,14 @@
         android:id="@+id/artDetail"
         android:name="com.nurullahsevinckan.artlib.view.ArtDetail"
         android:label="fragment_art_detail"
-        tools:layout="@layout/fragment_art_detail" />
+        tools:layout="@layout/fragment_art_detail" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/mainPage"
         android:name="com.nurullahsevinckan.artlib.view.MainPage"

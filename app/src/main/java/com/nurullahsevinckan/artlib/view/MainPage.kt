@@ -91,6 +91,7 @@ class MainPage : Fragment() {
         mainAdapter = MainRecyclerAdapter(postArrayList)
         binding!!.recyclerView.adapter = mainAdapter
 
+
         // Menü host and provider settings
         val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(object : MenuProvider {
@@ -117,5 +118,6 @@ class MainPage : Fragment() {
                 }
             }
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)
+
     }
 }
