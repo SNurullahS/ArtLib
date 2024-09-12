@@ -1,7 +1,6 @@
 package com.nurullahsevinckan.artlib.view
 
 import android.Manifest
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -27,8 +26,6 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.ktx.storage
-
-import com.nurullahsevinckan.artlib.R
 import com.nurullahsevinckan.artlib.databinding.FragmentAddArtBinding
 import java.util.UUID
 
@@ -137,13 +134,9 @@ class AddArt : Fragment() {
                 val intentToGallery = Intent(Intent.ACTION_PICK,MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
                 // Start activity for result
                 activityResultLauncger.launch(intentToGallery)
-
             }
 
         }
-
-
-
     }
 
     private fun registerLauncher() {
@@ -159,7 +152,6 @@ class AddArt : Fragment() {
                 }
             }
         }
-
         permissionLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) { result ->
 
             if(result){
@@ -172,7 +164,5 @@ class AddArt : Fragment() {
             }
 
         }
-
-
 }
 }

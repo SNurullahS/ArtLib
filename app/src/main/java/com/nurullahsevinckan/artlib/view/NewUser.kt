@@ -1,6 +1,5 @@
 package com.nurullahsevinckan.artlib.view
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,9 +10,6 @@ import androidx.navigation.Navigation
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-
-import com.nurullahsevinckan.artlib.R
-import com.nurullahsevinckan.artlib.databinding.FragmentAddArtBinding
 import com.nurullahsevinckan.artlib.databinding.FragmentNewUserBinding
 
 

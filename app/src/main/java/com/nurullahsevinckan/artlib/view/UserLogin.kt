@@ -1,7 +1,5 @@
 package com.nurullahsevinckan.artlib.view
 
-import android.content.Intent
-import android.os.Binder
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,10 +10,7 @@ import androidx.navigation.Navigation
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-
-import com.nurullahsevinckan.artlib.R
 import com.nurullahsevinckan.artlib.databinding.FragmentUserLoginBinding
-
 
 class UserLogin : Fragment() {
     private lateinit var _binding : FragmentUserLoginBinding
@@ -23,15 +18,10 @@ class UserLogin : Fragment() {
     private lateinit var auth : FirebaseAuth
     private lateinit var userMail : String
     private lateinit var userPassword : String
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         auth = Firebase.auth
-
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,6 +31,7 @@ class UserLogin : Fragment() {
         val view = binding.root
         return view
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
